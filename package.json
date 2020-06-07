@@ -1,0 +1,39 @@
+{
+  "name": "pudio",
+  "version": "1.0.0",
+  "description": "Pudio Casts is an open-source podcast for developers.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rad5academy/pudio.git"
+  },
+  "keywords": [
+    "Podcast",
+    "Open-source",
+    "Node.Js",
+    "Express.Js"
+  ],
+  "author": "Vincent Iroleh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rad5academy/pudio/issues"
+  },
+  "homepage": "https://github.com/rad5academy/pudio#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
+  }
+}
