@@ -1,0 +1,46 @@
+:root {
+    --hf-bg-color: #159DA5;
+    --main-color: #0898A0;
+    --purple: #563D7C;
+    --w100: 100%;
+    --fixed: fixed;
+}
+
+html body {
+    border: 0;
+    margin: 0;
+    background-color: var(--main-color);
+
+}
+
+.hf-bg {
+    background-color: var(--hf-bg-color);
+}
+
+.main-bg {
+    background-color: var(--main-color);
+}
+
+.text-purple {
+    color: var(--purple);
+    
+}
+
+#navbar {
+    overflow: hidden;
+    position: var(--fixed);
+    top: 0;
+    width: var(--w100);
+}
+
+.footer {
+    position: var(--fixed);
+    left: 0;
+    bottom: 0;
+    width: var(--w100);
+    padding: 20px;
+}
+
+main {
+    padding: 5%;
+}
