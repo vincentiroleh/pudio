@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
 
-<section class="jumbotron jumbotron-fluid main-bg shadow-lg mb-0 mt-5">
+<section class="jumbotron jumbotron-fluid main-bg shadow-lg mb-0 mt-3">
   <div class="container">
     <h1 class="display-4 text-white font-weight-bold">Pudio Casts</h1>
     <hr class="my-4 hf-bg" />
@@ -12,104 +12,33 @@
 </section>
 
 <main class="main-bg">
-  <h3 class="text-center mb-3"><i class="fa fa-podcast text-purple" aria-hidden="true"></i></h3>
   <section class="container shadow-lg mb-5">
     <div class="row">
+      <% podcasts.forEach((podcast) => { %>
       <div class="col-sm-4 mt-3">
         <div class="card mb-3 bg-white rounded">
           <div
-            class="card-header text-light hf-bg text-center h6 shadow-lg font-weight-bold"
+            class="card-header text-light hf-bg h6 shadow-lg font-weight-bold"
           >
-            HOW TO BECOME AN EFFECTIVE JUNIOR DEVELOPER
+            <%= podcast.title %>
           </div>
           <div class="card-text text-center text-purple h6 pt-2">
-            Louisa Barrett
+            <%= podcast.author %>
           </div>
           <div class="card-body">
             <audio controls style="width: 100%; max-width: 600px;">
-              <source
-                src="http://audio.simplecast.fm/18613.mp3"
-                type="audio/ogg"
-              />
-              <source
-                src="http://audio.simplecast.fm/18613.mp3"
-                type="audio/mpeg"
-              />
+              <source src="<%= podcast.link %>" type="audio/ogg" />
+              <source src="<%= podcast.link %>" type="audio/mpeg" />
               <p>
                 Your browser doesn't support HTML5 audio. Here is a
-                <a href="http://audio.simplecast.fm/18613.mp3"
-                  >link to download the audio</a
-                >
+                <a href="<%= podcast.link %>">link to download the audio</a>
                 instead.
               </p>
             </audio>
           </div>
         </div>
       </div>
-
-      <div class="col-sm-4 mt-3">
-        <div class="card mb-3 bg-white rounded">
-          <div
-            class="card-header text-light hf-bg text-center h6 shadow-lg font-weight-bold"
-          >
-            HOW TO BECOME AN EFFECTIVE JUNIOR DEVELOPER
-          </div>
-          <div class="card-text text-center text-purple h6 pt-2">
-            Louisa Barrett
-          </div>
-          <div class="card-body">
-            <audio controls style="width: 100%; max-width: 600px;">
-              <source
-                src="http://audio.simplecast.fm/18613.mp3"
-                type="audio/ogg"
-              />
-              <source
-                src="http://audio.simplecast.fm/18613.mp3"
-                type="audio/mpeg"
-              />
-              <p>
-                Your browser doesn't support HTML5 audio. Here is a
-                <a href="http://audio.simplecast.fm/18613.mp3"
-                  >link to download the audio</a
-                >
-                instead.
-              </p>
-            </audio>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4 mt-3">
-        <div class="card mb-3 bg-white rounded">
-          <div
-            class="card-header text-light hf-bg text-center h6 shadow-lg font-weight-bold"
-          >
-            HOW TO BECOME AN EFFECTIVE JUNIOR DEVELOPER
-          </div>
-          <div class="card-text text-center text-purple h6 pt-2">
-            Louisa Barrett
-          </div>
-          <div class="card-body">
-            <audio controls style="width: 100%; max-width: 600px;">
-              <source
-                src="http://audio.simplecast.fm/18613.mp3"
-                type="audio/ogg"
-              />
-              <source
-                src="http://audio.simplecast.fm/18613.mp3"
-                type="audio/mpeg"
-              />
-              <p>
-                Your browser doesn't support HTML5 audio. Here is a
-                <a href="http://audio.simplecast.fm/18613.mp3"
-                  >link to download the audio</a
-                >
-                instead.
-              </p>
-            </audio>
-          </div>
-        </div>
-      </div>
+      <% }) %>
     </div>
   </section>
 </main>
