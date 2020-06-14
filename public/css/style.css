@@ -1,10 +1,13 @@
 :root {
   --hf-bg-color: #159da5;
   --main-color: #0898a0;
+  --main-color-dark: #057379;
   --purple: #563d7c;
   --white: #ffffff;
   --w100: 100%;
   --fixed: fixed;
+  --absolute: absolute;
+  --z-index: 9;
 }
 
 html body {
@@ -21,6 +24,10 @@ html body {
   background-color: var(--main-color);
 }
 
+.main-bg-dark {
+  background-color: var(--main-color-dark);
+}
+
 .text-purple {
   color: var(--purple);
 }
@@ -28,6 +35,7 @@ html body {
 #navbar {
   overflow: hidden;
   position: var(--fixed);
+  z-index: var(--z-index);
   top: 0;
   width: var(--w100);
 }
@@ -37,6 +45,7 @@ html body {
   left: 0;
   bottom: 0;
   width: var(--w100);
+  z-index: var(--z-index);
   padding: 20px;
 }
 
@@ -44,3 +53,11 @@ main {
   padding: 5%;
 }
 
+.dashboard__container {
+  margin: auto;
+  padding: 20%;
+}
+
+.podcast__post_btn:hover {
+  background-color: var(--main-color-dark);
+}
