@@ -33,6 +33,10 @@
       </a>
 
       <% if(currentUser) { %>
+      <small class="text-success">
+        🎉 welcome back
+        <span class="shadow-lg font-weight-bold"><%= currentUser.username %></span>
+      </small>
 
       <button
         class="navbar-toggler"
@@ -62,4 +66,5 @@
       </div>
       <% } %>
     </nav>
-
+  </body>
+</html>
