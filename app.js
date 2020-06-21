@@ -20,7 +20,7 @@ const app = express();
 require('dotenv').config();
 
 // connect db
-mongoose.connect(process.env.DATABASE_LOCAL, {
+mongoose.connect(process.env.DATABASE_REMOTE, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
