@@ -30,8 +30,16 @@ class podcastController {
     res.status(200).render('login');
   }
 
-  static dashboard(req, res) {
-    res.status(200).render('dashboard');
+  static signup(req, res) {
+    res.status(200).render('signup');
+  }
+
+  static admin(req, res) {
+    res.status(200).render('admin');
+  }
+
+  static unauthorized(req, res) {
+    res.status(403).render('403');
   }
 }
 
