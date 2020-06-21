@@ -1,7 +1,7 @@
 :root {
-  --hf-bg-color: #101F2C;
-  --main-color: #101F2C;
-  --main-color-dark: #101F2C;
+  --hf-bg-color: #101f2c;
+  --main-color: #101f2c;
+  --main-color-dark: #101f2c;
   --purple: #563d7c;
   --white: #ffffff;
   --w100: 100%;
@@ -63,4 +63,73 @@ main {
 
 .podcast__post_btn:hover {
   background-color: var(--purple);
+}
+
+.each__podcast {
+  cursor: pointer;
+  text-decoration: none;
+  transition:all 0.3s ease;
+}
+
+.each__podcast:hover {
+  text-decoration: none;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  65% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  80% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes swing {
+  15% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  65% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  80% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.swing:hover {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }

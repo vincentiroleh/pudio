@@ -7,6 +7,7 @@ const { isAuthUser, isAuthUserAndSignedIn, isAdmin } = require('../middleware/Au
 
 // get routes
 router.get('/', controller.findPodcasts);
+router.get('/podcast/:id', controller.getPodcast);
 router.get('/login', isAuthUserAndSignedIn, controller.login);
 router.get('/signup', controller.signup);
 router.get('/admin', isAuthUser, isAdmin, controller.admin);
