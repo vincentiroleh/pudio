@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= podcast.title %> | <%= podcast.author %></title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --hf-bg-color: #101f2c;
+        --main-color: #101f2c;
+        --main-color-dark: #101f2c;
+        --purple: #563d7c;
+        --white: #ffffff;
+        --w100: 100%;
+        --fixed: fixed;
+        --absolute: absolute;
+        --z-index: 9;
+      }
+
+      html body {
+        border: 0;
+        margin: 0;
+        background-color: var(--main-color);
+      }
+
+      .hf-bg {
+        background-color: var(--hf-bg-color);
+      }
+
+      .main-bg {
+        background-color: var(--main-color);
+      }
+
+      .main-bg-dark {
+        background-color: var(--main-color-dark);
+      }
+
+      .text-purple {
+        color: var(--purple);
+      }
+
+      .bg-purple {
+        background-color: var(--purple);
+      }
+
+      #navbar {
+        overflow: hidden;
+        position: var(--fixed);
+        z-index: var(--z-index);
+        top: 0;
+        width: var(--w100);
+      }
+
+      .footer {
+        position: var(--fixed);
+        left: 0;
+        bottom: 0;
+        width: var(--w100);
+        z-index: var(--z-index);
+        padding: 20px;
+      }
+
+      main {
+        padding: 5%;
+      }
+
+      .dashboard__container {
+        padding: 10%;
+      }
+
+      .podcast__post_btn:hover {
+        background-color: var(--purple);
+      }
+    </style>
+  </head>
+  <body class="main-bg">
+    <nav class="navbar navbar-expand-lg navbar-light hf-bg" id="navbar">
+      <a class="navbar-brand text-white font-weight-bold" href="/">
+        Pudio Casts
+      </a>
+
+      <% if(currentUser) { %>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse navbar-right"
+        id="navbarTogglerDemo02"
+      >
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item mr-2 mb-2">
+            <a class="nav-link btn text-light" href="/logout">Logout</a>
+          </li>
+
+          <li class="nav-item mr-2 mb-2">
+            <a class="nav-link btn text-light" href="/admin">Admin</a>
+          </li>
+        </ul>
+      </div>
+      <% } %>
+    </nav>
+
+    <main class="mt-5">
+      <section class="container shadow-lg mb-3">
+        <div class="row">
+          <div class="col-sm-12 mt-5">
+            <div class="card main-bg mb-3 rounded">
+              <div
+                class="card-header text-light hf-bg h5 shadow-lg font-weight-bold"
+              >
+                <%= podcast.title %>
+              </div>
+              <div class="card-body">
+                <div class="card-subtitle text-white h6 font-weight-bold">
+                  <%= podcast.author %>
+                  <hr class="bg-white">
+                </div>
+
+                <div class="card-text text-light p font-weight-bold">
+                  <p>
+                    <%= podcast.description %>
+                  </p>
+                </div>
+
+                <div class="mt-5 ">
+                  <audio controls class="main-bg shadow-lg card-header text-light w-100">
+                    <source src="<%= podcast.link %>" type="audio/ogg" />
+                    <source src="<%= podcast.link %>" type="audio/mpeg" />
+                    Your browser does not support the audio tag
+                  </audio>
+                </div>
+
+                <div class="card-text text-light">
+                  <small class="main-bg"> <%= podcast.date %> </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

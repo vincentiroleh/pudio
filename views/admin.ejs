@@ -1,18 +1,15 @@
 <%- include('partials/header') -%>
 
 <section class="container shadow-lg dashboard__container main-bg-dark">
-  
   <div class="row">
     <div class="col-sm-12 mt-5">
       <div class="card bg-white rounded">
-        <div
-          class="card-header text-white hf-bg h6 shadow-lg font-weight-bold"
-        >
+        <div class="card-header text-white hf-bg h6 shadow-lg font-weight-bold">
           NEW PODCAST
         </div>
 
         <div class="card-body">
-          <form action="/podcast/new" method="POST">
+          <form action="/podcast/new" method="POST" id="podcastForm">
             <div class="form-group">
               <label for="inputTitle" class="text-purple">Title:</label>
               <input
@@ -24,7 +21,7 @@
                 required
               />
             </div>
-            
+
             <div class="form-group">
               <label for="inputAuthor" class="text-purple">Author:</label>
               <input
@@ -49,7 +46,19 @@
               />
             </div>
 
-            <button type="submit" class="btn main-bg text-light w-100 podcast__post_btn">POST</button>
+            <div class="form-group">
+              <label for="description" class="text-purple">Description:</label>
+              <textarea name="description" class="w-100" wrap="hard" required>
+                Description
+              </textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn main-bg text-light w-100 podcast__post_btn"
+            >
+              POST
+            </button>
           </form>
         </div>
       </div>

@@ -5,6 +5,7 @@ class podcastController {
     const newPodcast = {
       title: req.body.title,
       author: req.body.author,
+      description: req.body.description,
       link: req.body.link,
     };
 
@@ -23,6 +24,16 @@ class podcastController {
       })
       .catch((error) => {
         res.status(404).send(error);
+      });
+  }
+
+  static getPodcast(req, res) {
+    const searchQuery = { _id: req.params.id };
+    Podcasts.findOne(searchQuery)
+      .then((podcast) => {
+        res.render('podcast', { podcast });
+      }).catch((err) => {
+        req.flash('error_msg', err, 'Podcast not found');
       });
   }
 
