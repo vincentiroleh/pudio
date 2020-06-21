@@ -37,10 +37,6 @@ class podcastController {
   static admin(req, res) {
     res.status(200).render('admin');
   }
-
-  static unauthorized(req, res) {
-    res.status(403).render('403');
-  }
 }
 
 module.exports = podcastController;

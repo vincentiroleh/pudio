@@ -1,7 +1,7 @@
 :root {
-  --hf-bg-color: #159da5;
-  --main-color: #0898a0;
-  --main-color-dark: #057379;
+  --hf-bg-color: #101F2C;
+  --main-color: #101F2C;
+  --main-color-dark: #101F2C;
   --purple: #563d7c;
   --white: #ffffff;
   --w100: 100%;
@@ -58,10 +58,9 @@ main {
 }
 
 .dashboard__container {
-  margin: auto;
-  padding: 20%;
+  padding: 10%;
 }
 
 .podcast__post_btn:hover {
-  background-color: var(--main-color-dark);
+  background-color: var(--purple);
 }
