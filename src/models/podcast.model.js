@@ -16,7 +16,7 @@ const podcastSchema = new mongoose.Schema({
   },
   date: {
     type: String,
-    default: moment().calendar(),
+    default: () => moment().format('Do MMMM YYYY'),
   },
   link: {
     type: String,
